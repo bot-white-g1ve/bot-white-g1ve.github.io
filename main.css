@@ -59,6 +59,12 @@ section.content h3{
     color: #FFD040; text-shadow: black 0.1em 0.1em 0.2em;
 }
 
+/* 小标题 */
+span.title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
 /* 列举 */
 span.li::before, p.li::before{
     content:"- ";
@@ -75,15 +81,16 @@ section.content img {
 	height: 25vh; /* 初始高度设为界面高度的10% */
 	transition: height 0.5s ease;
 }
-section.content img:hover {
-	height: 60vh; /* 鼠标悬停时高度设为界面高度的30% */
-}
 section img.click{
     cursor: pointer; /* 让鼠标指针变成手形，提示可以点击 */ 
 }
 section.content img.no-margin {
     margin: 0px;
     margin-left: 40px;
+    height: 5vh;
+}
+section.content img:hover {
+	height: 60vh; /* 鼠标悬停时高度设为界面高度的30% */
 }
 
 /* 链接 */
