@@ -1,0 +1,199 @@
+/* 图片设置为背景 */
+img.background {
+    position: fixed; /* 使用 fixed 定位让视频始终填满整个视窗 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    width: 100%; /* 宽度设置为100% */
+    height: 100%; /* 高度设置为100% */
+    object-fit: cover; /* 确保视频覆盖整个容器，但保持宽高比，多余部分会被裁剪 */
+    z-index: -100; /* 设置 z-index 使视频在内容之后，不干扰文本和其他元素 */
+}
+
+/* 内容边框 */
+section.content {
+    padding: 20px 20px; /* 内边距 */
+    background-color: rgba(255, 255, 255, 0.7); /* 白色背景，50%透明度 */
+    margin: 40px 5%; /* 外边距 */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* 淡黑色边框，透明度20% */
+    border-radius: 40px; /* 边框四角的圆角，半径为40px */
+}
+section h1, section h2, section h3, section a, section button { 
+	margin-left: 30px; 
+}
+section.content span{
+	margin-left: 40px; 
+    margin-bottom: 5px;
+    display: block; 
+}
+section.content p{
+    margin-left: 40px;
+}
+
+/* new inline */
+section.content span.inline{
+    display: inline;
+    margin-left: 0px;
+}
+
+/* 特殊 */
+section.content span.名字 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+    color: #FFC000; text-shadow: black 0.1em 0.1em 0.2em;
+}
+section.content span.个人信息 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+section.content span.简介 {
+    /* font-style: italic; */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+    text-align: center;
+}
+section.content h3{
+    color: #FFD040; text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+/* 列举 */
+span.li::before, p.li::before{
+    content:"- ";
+}
+
+/* 小字 */
+span.small, p.small{
+    font-size: 12px;
+}
+
+/* 图片 */
+section.content img {
+    margin: 30px;
+	height: 25vh; /* 初始高度设为界面高度的10% */
+	transition: height 0.5s ease;
+}
+section.content img:hover {
+	height: 60vh; /* 鼠标悬停时高度设为界面高度的30% */
+}
+section img.click{
+    cursor: pointer; /* 让鼠标指针变成手形，提示可以点击 */ 
+}
+section.content img.no-margin {
+    margin: 0px;
+    margin-left: 40px;
+}
+
+/* 链接 */
+section a{
+    color:rgb(74, 76, 214);
+    display: inline;
+    margin-left: 0px;
+}
+
+
+/* 目录标题 */
+section h1{
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+section h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* words section */
+/* 主体函数在main.js */
+section.words {
+    padding: 5px 20px; /* 内边距 */
+    background-color: rgba(255, 255, 255, 0); /* 白色背景，100%透明度 */
+    margin: 5px 5%; /* 外边距 */
+    display: flex;       /* 使用flex布局使标签自动换行 */
+    flex-wrap: wrap;     /* 允许内容自动换行 */
+    gap: 10px;           /* 设置标签之间的间隙 */
+}
+.word-tag {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;  /* 调整圆角大小 */
+    padding: 5px 10px;
+    white-space: nowrap; /* 防止标签内的文字折行 */
+}
+
+/* images section */
+section.images {
+    display: flex;        /* 设定为Flex容器 */
+    flex-direction: column;  /* 子元素沿竖直方向排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    padding: 20px 20px; /* 内边距 */
+    padding: 20px 20px; /* 内边距 */
+    background-color: rgba(255, 255, 255, 0); /* 白色背景，100%透明度 */
+    margin: 40px 5%; /* 外边距 */
+}
+section.images img{
+    margin: 25vh 0;
+    height: 50vh;
+    display: block;
+}
+
+/* top left corner */
+.top-left{
+    position: fixed; /* 固定定位 */
+    top: 0; /* 距离顶部0 */
+    left: 0; /* 距离左边0 */
+    background-color: rgba(255, 255, 255, 0.5); /* 白色背景，50%透明度 */
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* 淡黑色边框，透明度20% */
+    border-radius: 0 0 10px 0; /* 依次为左上角、右上角、右下角、左下角 */
+    margin-left: 0; /* 确保没有左侧外边距 */
+    margin-top: 0;
+}
+.bottom-left{
+    position: fixed; /* 固定定位 */
+    bottom: 0;
+    left: 0; /* 距离左边0 */
+    background-color: rgba(255, 255, 255, 0.5); /* 白色背景，50%透明度 */
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* 淡黑色边框，透明度20% */
+    border-radius: 0 10px 0 0; /* 依次为左上角、右上角、右下角、左下角 */
+    margin-left: 0; /* 确保没有左侧外边距 */
+    margin-bottom: 0;
+}
+
+/* 透明度降低 */
+body.多文字 section.content{
+    padding: 20px 20px; /* 内边距 */
+    background-color: rgba(255, 255, 255, 0.7); /* 白色背景，70%透明度 */
+    margin: 40px 5%; /* 外边距 */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* 淡黑色边框，透明度20% */
+    border-radius: 40px; /* 边框四角的圆角，半径为40px */
+}
+body.多文字 .word-tag{
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;  /* 调整圆角大小 */
+    padding: 5px 10px;
+    white-space: nowrap; /* 防止标签内的文字折行 */
+}
+
+/* button平滑 */
+button {
+    border-radius: 6px; /* 设置边角的圆弧半径为10像素 */
+}
+
+/* 可折叠 */
+section.story{
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+}
+section.story.hidden > div, 
+section.story.hidden h3, 
+section.story.hidden p,
+section.story.hidden span:not(.名字):not(.个人信息):not(.简介) {
+    display: none; /* 隐藏所有内部的div、h3和p元素 */
+}
