@@ -65,3 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
         storySection.classList.toggle('hidden'); // 切换'hidden'类
     });
 });
+
+// 点击放大功能
+document.querySelectorAll('.content img.click').forEach(img => {
+    img.addEventListener('click', () => {
+        img.classList.toggle('enlarged');
+    });
+});

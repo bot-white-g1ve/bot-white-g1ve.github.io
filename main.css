@@ -76,20 +76,22 @@ span.small, p.small{
 }
 
 /* 图片 */
-section.content img {
+section.content img.click {
     margin: 30px;
-	height: 25vh; /* 初始高度设为界面高度的10% */
+	height: 20vh; /* 初始高度设为界面高度的10% */
 	transition: height 0.5s ease;
+    cursor: pointer;
 }
-section img.click{
-    cursor: pointer; /* 让鼠标指针变成手形，提示可以点击 */ 
+section.content img.click.enlarged{
+    height: 60vh; /* 点击后高度设为界面高度的75% */
 }
 section.content img.no-margin {
     margin: 0px;
     margin-left: 40px;
     height: 5vh;
+    transition: height 0.5s ease;
 }
-section.content img:hover {
+section.content img.no-margin:hover {
 	height: 60vh; /* 鼠标悬停时高度设为界面高度的30% */
 }
 
